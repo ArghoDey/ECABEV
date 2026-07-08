@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use ECABEV in your research, please cite the following paper."
+title: "ECABEV: Enhanced Channel Attention BEV for Resource-Constrained Scene Segmentation"
+preferred-citation:
+    type: article
+    title: "Enhanced BEV Scene Segmentation: De-Noise Channel Attention for Resource-Constrained Environments"
+    authors:
+    - family-names: "Dey"
+      given-names: "Argho"
+    - family-names: "Yin"
+      given-names: "Yunfei"
+    - family-names: "Yuan"
+      given-names: "Zheng"
+    - family-names: "Zeng"
+      given-names: "Zhiwen"
+    - family-names: "Bao"
+      given-names: "Xianjian"
+    - family-names: "Islam"
+      given-names: "Md Minhazul"
+    journal: "Computers, Materials & Continua"
+    year: "2025"
+    doi: "10.32604/cmc.2025.074122"
+references:
+    - type: conference-paper
+      title: "BEVCar: Camera-Radar Fusion for BEV Map and Object Segmentation"
+      authors:
+      - family-names: "Schramm"
+        given-names: "Jonas"
+      - family-names: "Vödisch"
+        given-names: "Niclas"
+      - family-names: "Petek"
+        given-names: "Kürsat"
+      - family-names: "Kiran"
+        given-names: "B Ravi"
+      - family-names: "Yogamani"
+        given-names: "Senthil"
+      - family-names: "Burgard"
+        given-names: "Wolfram"
+      - family-names: "Valada"
+        given-names: "Abhinav"
+      journal: "arXiv preprint arXiv:2403.11761"
+      year: "2024"

@@ -1,0 +1,32 @@
+ECABEV — Enhanced Channel Attention BEV
+=======================================
+
+This repository is the official implementation of:
+
+    Argho Dey, Yunfei Yin, Zheng Yuan, Zhiwen Zeng, Xianjian Bao, Md Minhazul Islam.
+    "Enhanced BEV Scene Segmentation: De-Noise Channel Attention for
+     Resource-Constrained Environments."
+    Computers, Materials & Continua, 2025/2026.
+    DOI: 10.32604/cmc.2025.074122
+
+ECABEV builds upon the BEVCar codebase and extends it with three novel
+contributions (de-noise enhanced channel attention, bilinear interpolation
+layer normalization, and a scalable cross-entropy BEV loss).
+
+--------------------------------------------------------------------------
+Derived work attribution
+--------------------------------------------------------------------------
+Portions of this repository (the data pipeline, DINOv2 adapter, deformable
+attention operators, VoxelNet radar encoder, and the training / evaluation
+harness) are derived from the BEVCar project:
+
+    Jonas Schramm, Niclas Vödisch, Kürsat Petek, B Ravi Kiran, Senthil
+    Yogamani, Wolfram Burgard, Abhinav Valada.
+    "BEVCar: Camera-Radar Fusion for BEV Map and Object Segmentation."
+    IROS 2024. arXiv:2403.11761.
+    https://github.com/robot-learning-freiburg/BEVCar
+
+BEVCar is released under the Creative Commons Attribution-NonCommercial-
+ShareAlike 4.0 International License (CC BY-NC-SA 4.0). In accordance with
+the ShareAlike term, this derivative work is released under the same license.
+See the LICENSE file for the full text.
