@@ -1,0 +1,81 @@
+# =====================================================================
+# ECABEV — main training configuration
+# Enhanced Channel Attention BEV (camera + radar fusion)
+# Resource-constrained setting from the paper: ViT-B/14 backbone, 224x224.
+# =====================================================================
+
+# model name
+exp_name: 'ECABEV'
+
+# Training parameters
+max_iters: 75000
+log_freq: 100
+shuffle: true
+dset: 'trainval'
+save_freq: 1000
+batch_size: 1
+grad_acc: 5
+lr: 0.0003
+use_scheduler: true
+weight_decay: 0.0000001
+nworkers: 4
+
+# Directories
+data_dir: '/datasets/nuscenes'
+custom_dataroot: 'datasets/scaled_images'
+log_dir: 'logs_nuscenes_ecabev'
+ckpt_dir: 'model_checkpoints'
+keep_latest: 75
+init_dir: ''
+ignore_load: null
+load_step: true
+load_optimizer: true
+load_scheduler: true
+
+# Data parameters
+# 224x224 low-resolution setting for resource-constrained environments.
+# Both dims are divisible by the ViT patch/stride factors (14, 8, 16, 32).
+final_dim: [224, 448]
+rand_flip: true
+rand_crop_and_resize: true
+ncams: 6
+nsweeps: 5
+
+# Model parameters
+encoder_type: 'dino_v2'        # frozen DINOv2 ViT-B/14 backbone
+radar_encoder_type: 'voxel_net'
+use_rpn_radar: false
+train_task: 'both'             # joint map + object segmentation
+use_radar: true
+use_radar_filters: false
+use_radar_encoder: true
+use_metaradar: false
+use_shallow_metadata: true
+use_pre_scaled_imgs: false
+use_obj_layer_only_on_map: true
+init_query_with_image_feats: true
+do_rgbcompress: true
+do_shuffle_cams: true
+use_multi_scale_img_feats: true
+num_layers: 6                  # six transformer blocks (paper Sec. 3.4.2)
+
+device_ids: [0]
+freeze_dino: true
+do_feat_enc_dec: true
+combine_feat_init_w_learned_q: true
+model_type: 'ecabev'
+use_radar_occupancy_map: false
+learnable_fuse_query: true
+
+# ECABEV: scalable cross-entropy BEV loss (object head)
+use_sce_loss: true
+sce_num_buckets: 10
+sce_top_k: 4
+
+# wandb
+group: 'ECABEV'
+notes: 'ECABEV: de-noise enhanced channel attention + bilinear interpolation layer
+normalization + scalable cross-entropy BEV loss. DINOv2 ViT-B/14 backbone, radar
+encoding, transformer fusion (6 blocks), 224x224 resolution for resource-constrained
+environments.'
+name: 'ECABEV'
