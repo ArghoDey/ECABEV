@@ -17,6 +17,11 @@ ECABEV reaches an **IoU of 39.961** with a frozen **DINOv2 ViT-B/14** backbone a
 a low **224 × 224** resolution, while using ~71.7% fewer parameters and ~55.9%
 less memory than the BEVCar baseline.
 
+<div align="center">
+  <img src="assets/architecture.png" width="90%"/>
+</div>
+
+
 ## ✨ Key contributions
 
 1. **De-Noise Enhanced Channel Attention** — a dual-pooling (global average +
