@@ -1,11 +1,11 @@
-# ECABEV: Enhanced Channel Attention BEV
+# Enhanced BEV Scene Segmentation: De-Noise Channel Attention for Resource-Constrained Environments
 
-**Enhanced BEV Scene Segmentation: De-Noise Channel Attention for Resource-Constrained Environments**
+**ECABEV: Enhanced Channel Attention Bird's Eye View**
 
 Argho Dey, Yunfei Yin\*, Zheng Yuan, Zhiwen Zeng, Xianjian Bao, Md Minhazul Islam
+
 *Computers, Materials & Continua*, 2025 — DOI: [10.32604/cmc.2025.074122](https://doi.org/10.32604/cmc.2025.074122)
 
-\*Corresponding author: `yinyunfei@cqu.edu.cn`
 
 ---
 
